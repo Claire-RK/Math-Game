@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<link rel="stylesheet" href="stylesheet.css" />
+<title>Untitled Document</title>
+</head>
+<body>
+	
+	
+	<div class="headings">
+	<h2>How To Play</h2>
+	<p>Type in the correct answer. Try not to use your calculator, Have funn!!!!</p>
+		</div>
+	<img class="bmo" src="images/BMO.png">
+	<img class="circle1" src="images/circle one.png">
+	<img class="plus" src="images/plus.png">
+	<img class="circle2" src="images/circle 2.png">
+	<img class="BMO2" src="images/bmof.png">
+	
+</script>
+	<div class="container">
+		<div class="questionClass1">
+	<h3>Question 1</h3>
+			
+	<p id="Question1"></p>
+	<p id="Answer1"></p>
+			<div class="question1Div">
+	<input id="answerOne"/>
+	<button onclick="getInputValue()" id="button1">Submit</button>
+	</div>
+			</div>
+	<div class="questionClass2">
+	<h3>Question 2</h3>
+	<p id="Question2"></p>
+	<p id="Answer2"></p>
+	<input id="answerTwo"/>
+	<button onclick="getInputValue2()" id="button2">Submit</button>
+	<div class="questionClass3">
+	<h3>Question 3</h3>
+	<p id="Question3"></p>
+	<p id="Answer3"></p>
+	<input id="answerThree"/>
+	<button onclick="getInputValue3()" id="button3">Submit</button>
+		<div class="points"<p id="points"></p></div>
+		</div>
+	
+	<script>
+		document.getElementById("Question1").innerHTML =
+	"1350 x 17 = " ;
+	
+		document.getElementById("Question2").innerHTML =
+	"353+88 = " ;
+		
+		document.getElementById("Question3").innerHTML =
+	"300/3 = " ;
+		
+		let score=0;
+		let answer1 = document.getElementById("answerOne");
+		let answer2 = document.getElementById("answerTwo");
+		let answer3 = document.getElementById("answerThree");
+		
+		function getInputValue(){
+		
+			
+			if(answer1.value==="22950"){
+				score = score+1;
+				document.getElementById("Answer1").textContent ="correct";
+			}
+			else{
+			document.getElementById("Answer1").textContent ="incorrect" ;
+			}
+			document.getElementById("test").textContent = score;
+			document.getElementById("button1").disabled = true;
+		}
+		
+		function getInputValue2(){
+			
+			if(answer2.value==="441"){
+				console.log(answer2);
+				score = score+1;
+				document.getElementById("Answer2").textContent ="correct";
+			}
+			else{
+			document.getElementById("Answer2").textContent ="incorrect" ;
+			}
+			document.getElementById("test").textContent = score;
+			document.getElementById("button2").disabled = true;
+		}
+		
+		function getInputValue3(){
+			if(answer3.value==="100"){
+				console.log(answer3);
+				score = score+1;
+				document.getElementById("Answer3").textContent ="correct";
+				
+				
+			}
+			else{
+			document.getElementById("Answer3").textContent ="incorrect" ;
+			}
+			
+			document.getElementById("points").textContent ="points:" + score;
+			document.getElementById("button3").disabled = true;
+			
+			
+		}
+		
+		
+		
+	</script>
+</body>
+</html>
